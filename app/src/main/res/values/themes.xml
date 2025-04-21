@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LogicTest2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryContainer">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryContainer">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryContainer</item>
+
+        <!-- Tertiary and error colors -->
+        <item name="colorTertiary">@color/green</item>
+        <item name="colorError">@color/red</item>
+
+        <!-- Optional: For better theming -->
+        <item name="android:windowLightStatusBar" tools:targetApi="l">false</item>
+    </style>
+
+    <style name="Theme.LogicTest2" parent="Base.Theme.LogicTest2" />
+</resources>

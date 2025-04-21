@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="RockPaperScissor"
+        app:titleTextColor="?attr/colorOnPrimary" />
+
+    <TextView
+        android:id="@+id/tvPlayerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Your Score 0/5"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbToolbar" />
+
+    <TextView
+        android:id="@+id/tvComputerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Your Score 0/5"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbToolbar" />
+
+    <TextView
+        android:id="@+id/tvWinnerRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ivPlayer"
+        app:layout_constraintEnd_toEndOf="@id/ivComputer"
+        app:layout_constraintBottom_toTopOf="@id/ivPlayer"
+        android:text="You Win Round 1 !!!"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+    
+    <ImageView
+        android:id="@+id/ivPlayer"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivComputer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/paper"
+        android:scaleType="centerCrop"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <ImageView
+        android:id="@+id/ivComputer"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toEndOf="@id/ivPlayer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/rock"
+        android:scaleType="centerCrop"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <TextView
+        android:id="@+id/tvPlayerMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Move"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/ivPlayer"
+        app:layout_constraintEnd_toEndOf="@id/ivPlayer"
+        app:layout_constraintTop_toBottomOf="@id/ivPlayer"/>
+
+    <TextView
+        android:id="@+id/tvComputerMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Move"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/ivComputer"
+        app:layout_constraintEnd_toEndOf="@id/ivComputer"
+        app:layout_constraintTop_toBottomOf="@id/ivComputer"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btRock"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btPaper"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPlayer"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btPaper"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btScissors"
+        app:layout_constraintStart_toEndOf="@+id/btRock"
+        app:layout_constraintTop_toBottomOf="@id/ivPlayer"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btScissors"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scissor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btPaper"
+        app:layout_constraintTop_toBottomOf="@id/ivPlayer"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="32dp"
+        android:backgroundTint="?attr/colorSecondary"
+        android:src="@drawable/ic_restart"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
