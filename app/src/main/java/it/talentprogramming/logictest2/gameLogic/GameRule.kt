@@ -1,5 +1,7 @@
 package it.talentprogramming.logictest2.gameLogic
 
+import android.content.Context
+import android.widget.Toast
 import it.talentprogramming.logictest2.R
 
 val gameRule =
@@ -8,7 +10,7 @@ val gameRule =
         "beats" to "SCISSOR",
         "imageResId" to R.drawable.rock
     ),
-    "Paper" to hashMapOf(
+    "PAPER" to hashMapOf(
         "beats" to "ROCK",
         "imageResId" to R.drawable.paper
     ),
@@ -17,3 +19,7 @@ val gameRule =
         "imageResId" to R.drawable.scissors
     )
 )
+
+fun Context.showToast(value : String){
+    Toast.makeText(this, value , Toast.LENGTH_SHORT).show()
+}
