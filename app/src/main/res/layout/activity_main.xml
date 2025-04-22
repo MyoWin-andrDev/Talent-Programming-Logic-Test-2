@@ -50,7 +50,8 @@
         android:text="You Win Round 1 !!!"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="32dp"
+        android:visibility="invisible"/>
     
     <ImageView
         android:id="@+id/ivPlayer"
@@ -87,7 +88,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@id/ivPlayer"
         app:layout_constraintEnd_toEndOf="@id/ivPlayer"
-        app:layout_constraintTop_toBottomOf="@id/ivPlayer"/>
+        app:layout_constraintTop_toBottomOf="@id/ivPlayer"
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/tvComputerMove"
@@ -98,7 +100,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@id/ivComputer"
         app:layout_constraintEnd_toEndOf="@id/ivComputer"
-        app:layout_constraintTop_toBottomOf="@id/ivComputer"/>
+        app:layout_constraintTop_toBottomOf="@id/ivComputer"
+        android:visibility="invisible"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btRock"
@@ -138,13 +141,15 @@
         android:onClick="playerMove"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFloating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="32dp"
         android:backgroundTint="?attr/colorSecondary"
-        android:src="@drawable/ic_restart"/>
+        android:src="@drawable/ic_restart"
+        android:visibility="invisible"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
